@@ -1,0 +1,56 @@
+/*import any plugins here*/
+/* ================================= 
+  Variables
+==================================== */
+/* ================================= 
+  Base Styles
+==================================== */
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700");
+html {
+  box-sizing: border-box; }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+html,
+body {
+  height: 100%; }
+
+a {
+  text-decoration: none; }
+
+li {
+  list-style-type: none; }
+
+/* ================================= 
+  Typography Styles
+==================================== */
+@font-face {
+  font-family: 'SFDigitalReadout-Medium';
+  src: url("../fonts/SFDigitalReadout-Medium.eot");
+  src: url("../fonts/SFDigitalReadout-Medium.woff2") format("woff2"), url("../fonts/SFDigitalReadout-Medium.woff") format("woff"), url("../fonts/SFDigitalReadout-Medium.ttf") format("truetype"), url("../fonts/SFDigitalReadout-Medium.svg#SFDigitalReadout-Medium") format("svg"), url("../fonts/SFDigitalReadout-Medium.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal; }
+
+/* ================================= 
+  Button Styles
+==================================== */
+/* ================================= 
+  Calculator Styles
+==================================== */
+.container {
+  width: 100%; }
+
+.calculator {
+  background: #222;
+  width: 500px;
+  height: 500px;
+  margin: 0 Auto; }
+
+/* ================================= 
+  Footer Styles
+==================================== */
+
+/*# sourceMappingURL=styles.css.map */
