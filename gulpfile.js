@@ -5,7 +5,9 @@ var gulp = require('gulp'),
 	uglify = require('gulp-uglify'),
 	rename = require('gulp-rename'),
 		sass = require('gulp-sass'),
-		maps = require('gulp-sourcemaps');
+		maps = require('gulp-sourcemaps'),
+		autoprefixer = require('gulp-autoprefixer');
+
 
 
 gulp.task("concatScripts", function(){
@@ -30,6 +32,7 @@ gulp.task('compileSass', function() {
 	return gulp.src("scss/styles.scss")
 		.pipe(maps.init())
 		.pipe(sass())
+		.pipe(autoprefixer())
 		.pipe(maps.write('./'))
 		.pipe(gulp.dest('css'));
 }) 
