@@ -11,22 +11,26 @@
   </head>
   <body>
     <div class="wrapper">
+       <!-- screen -->
+  	  <div class='display text-right'>
+        <div id='entry'>
+          <p id='answer' class="LCD-segment charOn">0</p>
+        </div>
+      </div>
       <div class="calculator">
 
-        <!-- screen -->
-        <div class='text-right'>
-          <div id='entry'>
-            <p id='answer'>0</p>
-          </div>
-        </div>
 
         <!-- Buttons -->
         <button value='c' class="clear">C</button>
-
+        <div class="space"></div>
+        <label class="switch label-switch">
+          <input type="checkbox" />
+          <div class="checkbox"></div>
+        </label> 
         <button value='7' class="number row1">7</button>
         <button value='8' class="number row1">8</button>
         <button value='9' class="number row1">9</button>
-        <button value='*' class="function row1">X</button>
+        <button value='*' class="function row1">&#215;</button>
 
         <button value='4' class="number row2">4</button>
         <button value='5' class="number row2">5</button>

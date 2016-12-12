@@ -5,29 +5,112 @@
 
 
 /* ================================= 
-  Calculator Styles
+  Flex Styles
 ==================================== */
 
-.container {
-	width: 100%;
+.parent {
+  border: 5px solid lightcoral;
 }
+
+.item, .switch {
+  height: 50px;
+  margin: 5px;
+  background: DeepSkyBlue;
+  color: white;
+  text-align: center;
+  line-height: 50px;
+  font-weight: 600;
+}
+
+/* ================================= 
+  Calculator Display
+==================================== */
+
+.display {
+	@include plastics(500px, 140px);
+
+/*	aborted effort at trapezoid shape*/
+/*	border-bottom: 100px solid $gray;
+	border-left: 30px solid transparent;
+	border-right: 30px solid transparent;
+	height: 0;*/
+}
+
+.screen {
+	border-radius: 2px;
+	text-align: center;
+	background: $oil;
+	margin: 10px auto;
+	width: 400px;
+	height: 100px;
+} 
+
+.LCD-segment {
+	font-size: 3em;
+	font-family: $screen-font;	
+}
+
+.charDull {
+	color: $dark-gray;
+}
+
+
+.charOn {
+	color: $green;
+	text-shadow: 0 0 1px lighten($green, 30%), 
+	0 0 2px darken($green, 30%); 
+}
+
+/* ================================= 
+  Calculator Body
+==================================== */
 
 .calculator {
-	background: $dark-gray;
-	width: 500px;
-	height: 500px;
-	margin: 0 Auto;
+	@include plastics(500px, 340px);
+
+	display: flex;
+/*	align-content: space-between;*/
+	flex-wrap: wrap;
+	justify-content: space-around;
+
+}
+
+.number, .function, .space, .clear {  /*maybe delete this when flex is setup?*/
+	width: 20%;
+}
+
+.switch {
+	width: 45%;
+	background: transparent;
 }
 
 
+.clear {
+	@include button($red);
+}
 
+.space {
+	background: transparent;
+}
 
+.number {
+	@include button($ivory);
+}
 
+.function {
+	@include button($blue);
+}
+/*.item:nth-child(2) {
+	order: 2;
+}
 
+.item:nth-child(3) {
+	order: 2;
+}
 
-
-
-
+.item:nth-child(5) {
+	order: 3;
+}*/
 
 
 
