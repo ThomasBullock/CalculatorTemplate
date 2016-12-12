@@ -10,6 +10,7 @@
     <meta name="viewport" content="width=device-width">
   </head>
   <body>
+
     <div class="wrapper">
        <!-- screen -->
   	  <div class='display text-right'>
@@ -17,36 +18,47 @@
           <p id='answer' class="LCD-segment charOn">0</p>
         </div>
       </div>
+
       <div class="calculator">
 
 
         <!-- Buttons -->
+
+        <div class="btnContainer">
         <button value='c' class="clear">C</button>
-        <div class="space"></div>
         <label class="switch label-switch">
           <input type="checkbox" />
           <div class="checkbox"></div>
-        </label> 
-        <button value='7' class="number row1">7</button>
-        <button value='8' class="number row1">8</button>
-        <button value='9' class="number row1">9</button>
-        <button value='*' class="function row1">&#215;</button>
+        </label>
+        </div>
 
-        <button value='4' class="number row2">4</button>
-        <button value='5' class="number row2">5</button>
-        <button value='6' class="number row2">6</button>
-        <button value='/' class="function row2">&divide;</button>
+        <div class="btnContainer">
+        <button value='7' class="number">7</button>
+        <button value='8' class="number">8</button>
+        <button value='9' class="number">9</button>
+        <button value='*' class="function">&#215;</button>
+        </div>
 
+        <div class="btnContainer">
+        <button value='4' class="number">4</button>
+        <button value='5' class="number">5</button>
+        <button value='6' class="number">6</button>
+        <button value='/' class="function">&divide;</button>
+        </div>
 
-        <button value='1' class="number row3">1</button>
-        <button value='2' class="number row3">2</button>
-        <button value='3' class="number row3">3</button>
-        <button value='+' class="function row3">+</button>
+        <div class="btnContainer">
+        <button value='1' class="number">1</button>
+        <button value='2' class="number">2</button>
+        <button value='3' class="number">3</button>
+        <button value='+' class="function">+</button>
+        </div>
 
-        <button value='0' class="number row4">0</button>
-        <button value='.' class="number row4">.</button>
-        <button value='-' class="function row4">-</button>
-        <button value='=' class='function row4'>=</button>
+        <div class="btnContainer">
+        <button value='0' class="number">0</button>
+        <button value='.' class="number">.</button>
+        <button value='-' class="function">-</button>
+        <button value='=' class="function">=</button>
+        </div>
 
       </div> <!-- end calculator  -->
      </div> <!--end wrapper -->

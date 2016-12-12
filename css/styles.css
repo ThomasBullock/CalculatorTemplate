@@ -1,8 +1,8 @@
 /*import any plugins here*/
-/* ================================= 
+/* =================================
   Variables
 ==================================== */
-/* ================================= 
+/* =================================
   Base Styles
 ==================================== */
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700");
@@ -27,7 +27,7 @@ li {
 button {
   border: none; }
 
-/* ================================= 
+/* =================================
   Typography Styles
 ==================================== */
 @font-face {
@@ -37,10 +37,10 @@ button {
   font-weight: normal;
   font-style: normal; }
 
-/* ================================= 
+/* =================================
   Button Styles
 ==================================== */
-/* ================================= 
+/* =================================
   Plastics Styles
 ==================================== */
 .label-switch {
@@ -104,7 +104,7 @@ button {
       .label-switch input[type="checkbox"]:checked + .checkbox::after {
         left: 22px; }
 
-/* ================================= 
+/* =================================
   Flex Styles
 ==================================== */
 .parent {
@@ -119,7 +119,7 @@ button {
   line-height: 50px;
   font-weight: 600; }
 
-/* ================================= 
+/* =================================
   Calculator Display
 ==================================== */
 .display {
@@ -150,13 +150,17 @@ button {
   font-family: "SFDigitalReadout-Medium", mono-space; }
 
 .charDull {
-  color: #242424; }
+  color: #242424;
+}
 
 .charOn {
   color: #00ED9A;
-  text-shadow: 0 0 1px #87ffd5, 0 0 2px #005437; }
+  text-shadow: 0 0 1px #87ffd5, 0 0 2px #005437;
+  text-align: right;
+  margin-right: 13px;
+}
 
-/* ================================= 
+/* =================================
   Calculator Body
 ==================================== */
 .calculator {
@@ -177,12 +181,11 @@ button {
   -ms-flex-pack: distribute;
       justify-content: space-around; }
 
-.number, .function, .space, .clear {
-  /*maybe delete this when flex is setup?*/
+.clear {
   width: 20%; }
 
 .switch {
-  width: 45%;
+  width: 68%;
   background: transparent; }
 
 .clear {
@@ -238,8 +241,22 @@ button {
 .item:nth-child(5) {
 	order: 3;
 }*/
-/* ================================= 
+/* =================================
   Footer Styles
 ==================================== */
 
 /*# sourceMappingURL=styles.css.map */
+
+/* Flex box */
+.btnContainer {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin: 10px 0;
+}
+.number {
+  width: 20%;
+}
+.function {
+  width: 20%;
+}
