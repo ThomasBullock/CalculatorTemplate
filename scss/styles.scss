@@ -4,7 +4,7 @@
 
 
 
-/* ================================= 
+/* =================================
   Flex Styles
 ==================================== */
 
@@ -22,7 +22,7 @@
   font-weight: 600;
 }
 
-/* ================================= 
+/* =================================
   Calculator Display
 ==================================== */
 
@@ -43,11 +43,11 @@
 	margin: 10px auto;
 	width: 400px;
 	height: 100px;
-} 
+}
 
 .LCD-segment {
 	font-size: 3em;
-	font-family: $screen-font;	
+	font-family: $screen-font;
 }
 
 .charDull {
@@ -57,11 +57,11 @@
 
 .charOn {
 	color: $green;
-	text-shadow: 0 0 1px lighten($green, 30%), 
-	0 0 2px darken($green, 30%); 
+	text-shadow: 0 0 1px lighten($green, 30%),
+	0 0 2px darken($green, 30%);
 }
 
-/* ================================= 
+/* =================================
   Calculator Body
 ==================================== */
 
@@ -76,7 +76,7 @@
 }
 
 .number, .function, .space, .clear {  /*maybe delete this when flex is setup?*/
-	width: 20%;
+	width: 24%;
 }
 
 .switch {
@@ -114,6 +114,6 @@
 
 
 
-/* ================================= 
+/* =================================
   Footer Styles
 ==================================== */
