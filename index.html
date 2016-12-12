@@ -9,19 +9,50 @@
     <link rel="stylesheet" href="css/styles.css">
     <meta name="viewport" content="width=device-width">
   </head>
-  <body> 
-    <div class="container">
+  <body>
+    <div class="wrapper">
       <div class="calculator">
-          
-      </div>
-    </div>
-    
+
+        <!-- screen -->
+        <div class='text-right'>
+          <div id='entry'>
+            <p id='answer'>0</p>
+          </div>
+        </div>
+
+        <!-- Buttons -->
+        <button value='c' class="clear">C</button>
+
+        <button value='7' class="number row1">7</button>
+        <button value='8' class="number row1">8</button>
+        <button value='9' class="number row1">9</button>
+        <button value='*' class="function row1">X</button>
+
+        <button value='4' class="number row2">4</button>
+        <button value='5' class="number row2">5</button>
+        <button value='6' class="number row2">6</button>
+        <button value='/' class="function row2">&divide;</button>
+
+
+        <button value='1' class="number row3">1</button>
+        <button value='2' class="number row3">2</button>
+        <button value='3' class="number row3">3</button>
+        <button value='+' class="function row3">+</button>
+
+        <button value='0' class="number row4">0</button>
+        <button value='.' class="number row4">.</button>
+        <button value='-' class="function row4">-</button>
+        <button value='=' class='function row4'>=</button>
+
+      </div> <!-- end calculator  -->
+     </div> <!--end wrapper -->
+
 
 		<footer class="main-footer">
 
 
 		</footer>
-    
+
     <script src="js/app.js"></script>
   </body>
 </html>
