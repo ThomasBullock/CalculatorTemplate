@@ -1,5 +1,5 @@
 .label-switch {
-  $action-color: #477DCA !default;
+  $action-color: $dark-gray !default;
   $base-background-color: $gray;
   $switch-width: 52px;
   $switch-padding: 2px;
@@ -26,6 +26,7 @@
       background: $switch-border-background;
       border: 0;
       border-radius: $switch-radius;
+      // border: solid 1px $oil;            
       cursor: pointer;
       height: $switch-height;
       margin: 0;
@@ -59,7 +60,7 @@
         left: 2px;
         width: $knob-size;
         height: $knob-size;
-        background: $switch-background;
+        background: $switch-background; 
         border-radius: $knob-radius;
         box-shadow: $switch-shadow;
         content: "";

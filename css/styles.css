@@ -1,8 +1,8 @@
 /*import any plugins here*/
-/* =================================
+/* ================================= 
   Variables
 ==================================== */
-/* =================================
+/* ================================= 
   Base Styles
 ==================================== */
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700");
@@ -27,7 +27,10 @@ li {
 button {
   border: none; }
 
-/* =================================
+p {
+  margin: 0; }
+
+/* ================================= 
   Typography Styles
 ==================================== */
 @font-face {
@@ -37,10 +40,10 @@ button {
   font-weight: normal;
   font-style: normal; }
 
-/* =================================
+/* ================================= 
   Button Styles
 ==================================== */
-/* =================================
+/* ================================= 
   Plastics Styles
 ==================================== */
 .label-switch {
@@ -53,7 +56,7 @@ button {
   .label-switch input[type="checkbox"] {
     display: none; }
     .label-switch input[type="checkbox"] + .checkbox {
-      background: #3f3f3f;
+      background: #3d3d3d;
       border: 0;
       border-radius: 32px;
       cursor: pointer;
@@ -71,7 +74,7 @@ button {
         right: 0;
         bottom: 0;
         left: 2px;
-        background: #565656;
+        background: #545454;
         border-radius: 32px;
         content: "";
         height: 28px;
@@ -89,7 +92,7 @@ button {
         left: 2px;
         width: 28px;
         height: 28px;
-        background: #565656;
+        background: #545454;
         border-radius: 28px;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
         content: "";
@@ -97,7 +100,7 @@ button {
         transition: all 0.3s ease;
         z-index: 2; }
     .label-switch input[type="checkbox"]:checked + .checkbox {
-      background: #477DCA; }
+      background: #242424; }
       .label-switch input[type="checkbox"]:checked + .checkbox::before {
         -webkit-transform: scale(0);
                 transform: scale(0); }
@@ -105,71 +108,74 @@ button {
         left: 22px; }
 
 /* =================================
-  Flex Styles
+  Page Styles
 ==================================== */
-.parent {
-  border: 5px solid lightcoral; }
-
-.item, .switch {
-  height: 50px;
-  margin: 5px;
-  background: DeepSkyBlue;
-  color: white;
-  text-align: center;
-  line-height: 50px;
-  font-weight: 600; }
+.wrapper {
+  width: 500px;
+  margin: 20px auto; }
 
 /* =================================
   Calculator Display
 ==================================== */
 .display {
-  background: -webkit-linear-gradient(top, #565656, #242424);
-  background: linear-gradient(180deg, #565656, #242424);
+  background: -webkit-linear-gradient(top, #545454, #242424);
+  background: linear-gradient(180deg, #545454, #242424);
   width: 500px;
   height: 140px;
   border-radius: 10px;
-  border: solid 10px #171717;
+  border: solid 8px #171717;
   /*	border-image: linear-gradient(to bottom, darken($gray, 10%) 0%, darken($dark-gray, 10%) 100%);*/
   /*	border-image-slice: 1;*/
+  /*	text-align: center;*/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   /*	aborted effort at trapezoid shape*/
   /*	border-bottom: 100px solid $gray;
 	border-left: 30px solid transparent;
 	border-right: 30px solid transparent;
 	height: 0;*/ }
 
-.screen {
+.LCD {
+  border: solid 1px #242424;
   border-radius: 2px;
-  text-align: center;
   background: #111;
-  margin: 10px auto;
+  /*	margin: 25px auto;*/
   width: 400px;
-  height: 100px; }
+  height: 60px; }
+
+.entry {
+  text-align: right;
+  margin-top: 15px;
+  margin-right: 13px; }
 
 .LCD-segment {
   font-size: 3em;
   font-family: "SFDigitalReadout-Medium", mono-space; }
 
 .charDull {
-  color: #242424;
-}
+  color: #242424; }
 
 .charOn {
   color: #00ED9A;
-  text-shadow: 0 0 1px #87ffd5, 0 0 2px #005437;
-  text-align: right;
-  margin-right: 13px;
-}
+  text-shadow: 0 0 1px #87ffd5, 0 0 2px #005437; }
 
 /* =================================
   Calculator Body
 ==================================== */
 .calculator {
-  background: -webkit-linear-gradient(top, #565656, #242424);
-  background: linear-gradient(180deg, #565656, #242424);
+  background: -webkit-linear-gradient(top, #545454, #242424);
+  background: linear-gradient(180deg, #545454, #242424);
   width: 500px;
   height: 340px;
   border-radius: 10px;
-  border: solid 10px #171717;
+  border: solid 8px #171717;
   /*	border-image: linear-gradient(to bottom, darken($gray, 10%) 0%, darken($dark-gray, 10%) 100%);*/
   /*	border-image-slice: 1;*/
   display: -webkit-box;
@@ -181,10 +187,28 @@ button {
   -ms-flex-pack: distribute;
       justify-content: space-around; }
 
+/**** Flex box ****/
+.btnContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100%;
+  margin: 10px 0; }
+
+.btnContainer:last-child {
+  margin-bottom: 18px; }
+
+.number, .function {
+  width: 20%; }
+
 .clear {
+  /*maybe delete this when flex is setup?*/
   width: 20%; }
 
 .switch {
+  padding-top: .5em;
   width: 68%;
   background: transparent; }
 
@@ -246,17 +270,3 @@ button {
 ==================================== */
 
 /*# sourceMappingURL=styles.css.map */
-
-/* Flex box */
-.btnContainer {
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
-  margin: 10px 0;
-}
-.number {
-  width: 20%;
-}
-.function {
-  width: 20%;
-}
