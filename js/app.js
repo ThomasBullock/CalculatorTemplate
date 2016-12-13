@@ -14,41 +14,44 @@ keys.forEach(function(item) {
 const controller = {
   keyValue: [],
   answer: 0,
-	displayOutput: answer,
-  input: function (keyValue) {
-    if (keyValue === '0' && controller.keyValue[0] === '0') {
-    } else if (keyValue === '=') {
-    	view.clear();
-      controller.calculate(controller.keyValue.join(''));
-			controller.displayOutput = controller.answer;
-			view.display(controller.displayOutput);
-
-		} else if(keyValue === 'c') {
-			view.clear();
-		}
-		else {
-      controller.keyValue.push(keyValue);
-			controller.displayOutput = controller.keyValue.join('');
-			view.display(controller.displayOutput);
+	displayOutput: this.answer,
+  input: function (key) {
+    if (key === '0' && this.keyValue[0] === '0') {
+      this.keyValue[0] = '0';
+    } else if (key === '=') {
+      this.calculate(this.keyValue.join(''));
+      this.displayOutput = this.answer;
+      view.display(this.displayOutput);
+      controller.keyValue = [];
+    } else if (key === 'c') {
+      view.clear();
+    } else {
+      this.keyValue.push(key);
+      this.displayOutput = this.keyValue.join('');
+      view.display(this.displayOutput);
     }
 		// view.display(controller.keyValue.join(''));
   },
  calculate: function(str) {
-	  controller.answer = eval(str);
-		// console.log(controller.answer);
+   this.answer = eval(str);
+ // console.log(controller.answer);
  },
 };
 
 const view = {
+
   display: function (str) {
-    let screen = document.getElementById('answer');
+    const screen = document.getElementById('answer');
     screen.innerHTML = str;
     console.log(str);
   },
+
 	clear: function () {
-  let screen = document.getElementById('answer');
-	screen.innerHTML = '';
-	}
+  const screen = document.getElementById('answer');
+	screen.innerHTML = '0';
+  controller.answer = 0;
+  controller.keyValue = [];
+},
 };
 
 //# sourceMappingURL=app.js.map
