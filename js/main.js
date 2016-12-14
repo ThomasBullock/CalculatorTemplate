@@ -14,7 +14,7 @@ keys.forEach(function(item) {
 const controller = {
   keyValue: [],
   answer: 0,
-	displayOutput: this.answer,
+  displayOutput: this.answer,
   input: function (key) {
     if (key === '0' && this.keyValue[0] === '0') {
       this.keyValue[0] = '0';
@@ -30,12 +30,12 @@ const controller = {
       this.displayOutput = this.keyValue.join('');
       view.display(this.displayOutput);
     }
-		// view.display(controller.keyValue.join(''));
+ // view.display(controller.keyValue.join(''));
   },
- calculate: function(str) {
-   this.answer = eval(str);
+  calculate: function(str) {
+    this.answer = eval(str);
  // console.log(controller.answer);
- },
+  },
 };
 
 const view = {
@@ -48,7 +48,7 @@ const view = {
 
 	clear: function () {
   const screen = document.getElementById('answer');
-	screen.innerHTML = '0';
+  screen.innerHTML = '0';
   controller.answer = 0;
   controller.keyValue = [];
 },
