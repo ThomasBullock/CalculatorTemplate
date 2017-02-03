@@ -1,0 +1,17 @@
+/* ================================= 
+  Plastics Styles
+==================================== */
+
+@mixin plastics($width, $height) {
+	background: #444;
+	background-image: url('../img/redox_02_inv.png'); /* fallback */
+	background-image: linear-gradient(180deg, darken($trans-dark-gray, 8%), $trans-gray 8%, $trans-gray 93%, darken($trans-dark-gray, 8%)), url('../img/redox_02_inv.png') ;
+	
+		
+	width: $width;
+	height: $height;
+	border-radius: 12px;
+	border: solid 5px darken($dark-gray, 5%);
+/*	border-image: linear-gradient(to bottom, darken($gray, 10%) 0%, darken($dark-gray, 10%) 100%);*/
+/*	border-image-slice: 1;*/
+}
