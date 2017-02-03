@@ -2,7 +2,6 @@
 
 var gulp = require('gulp'),
 	concat = require('gulp-concat'),
-	uglify = require('gulp-uglify'),
 	rename = require('gulp-rename'),
 		sass = require('gulp-sass'),
 		maps = require('gulp-sourcemaps'),
@@ -12,24 +11,16 @@ var gulp = require('gulp'),
 
 gulp.task("concatScripts", function(){
 		return gulp.src([
-			'js/jquery.js', 
-			'js/sticky/jquery.sticky.js', 
-			'js/main.js'])
+			'src/javascript/main.js'])
 		.pipe(maps.init())
 		.pipe(concat('app.js'))
 		.pipe(maps.write('./'))		
 		.pipe(gulp.dest('js'));
 });
 
-gulp.task("minifyScripts", ["concatScripts"], function(){
-	return gulp.src("js/app.js")
-		.pipe(uglify())
-		.pipe(rename('app.min.js'))
-		.pipe(gulp.dest('js'));
-});
 
 gulp.task('compileSass', function() {
-	return gulp.src("scss/styles.scss")
+	return gulp.src("src/scss/styles.scss")
 		.pipe(maps.init())
 		.pipe(sass())
 		.pipe(autoprefixer())
@@ -38,12 +29,12 @@ gulp.task('compileSass', function() {
 }) 
 
 gulp.task('watchFiles', function() {
-	gulp.watch('scss/**/*.scss', ['compileSass']);
-	gulp.watch('js/main.js', ['concatScripts'])
+	gulp.watch('src/scss/**/*.scss', ['compileSass']);
+	gulp.watch('src/javascript/main.js', ['concatScripts'])
 })
 
 
-gulp.task("build", ['minifyScripts', 'compileSass'], function(){
+gulp.task("build", ['concatScripts', 'compileSass'], function(){
 	return gulp.src(["css/styles.css", "js/app.min.js", "index.html", "img/**", "fonts/**"], { base: './'})
 					.pipe(gulp.dest('dist'));
 });
